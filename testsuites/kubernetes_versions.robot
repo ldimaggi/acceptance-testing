@@ -48,7 +48,7 @@ Helm works with Kubernetes 1.14.6
 Test Helm on Kubernetes version
     Require cluster  True
 
-    ${helm_version} =  Get Environment Variable  ROBOT_HELM_V3  "v2"
+    ${helm_version} =  Get Environment Variable  ROBOT_HELM_V3
     Pass Execution If  ${helm_version} == 'v2'  Helm v2 not supported. Skipping test.
 
     [Arguments]    ${kube_version}

@@ -26,7 +26,7 @@ export GITHUB_SHA="${GITHUB_SHA:-latest}"
 which helm || true
 mkdir -p /tmp/gopath/src/helm.sh
 pushd /tmp/gopath/src/helm.sh
-git clone https://github.com/helm/helm.git -b master
+git clone ${HELM_REPO} -b master
 pushd helm/
 GOPATH=/tmp/gopath make build
 popd
