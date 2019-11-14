@@ -101,5 +101,5 @@ Make sure repo update now fails, with a proper message
 
 *** Keyword ***
 Check helm version
-    ${helm_version} =  Get Environment Variable  ROBOT_HELM_V3  "v2"
+    ${helm_version} =  Get Environment Variable  ROBOT_HELM_V3
     Pass Execution If  ${helm_version} == 'v2'  Helm v2 not supported. Skipping test.
