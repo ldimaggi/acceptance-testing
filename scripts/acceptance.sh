@@ -114,20 +114,17 @@ export XDG_DATA_HOME=${TMP_DIR}/data && mkdir -p ${XDG_DATA_HOME}
 # will timeout.
 set_shell_debug_level 3
 
-which helm
-helm version
-
-if helm version -c &> /dev/null; then
-    echo "===================="
-    echo "Running with Helm v2"
-    echo "===================="
-    unset ROBOT_HELM_V3
-else
-    echo "===================="
-    echo "Running with Helm v3"
-    echo "===================="
-    export ROBOT_HELM_V3=1
-fi
+# if helm version -c &> /dev/null; then
+#     echo "===================="
+#     echo "Running with Helm v2"
+#     echo "===================="
+#     unset ROBOT_HELM_V3
+# else
+#     echo "===================="
+#     echo "Running with Helm v3"
+#     echo "===================="
+#     export ROBOT_HELM_V3=1
+# fi
 
 set_shell_debug_level 2
 if [[ ! -d ${ROBOT_VENV_DIR} ]]; then
