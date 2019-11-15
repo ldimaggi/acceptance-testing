@@ -34,11 +34,11 @@ fi
 
 set_shell_debug_level 2
 REQUIRED_SYSTEM_COMMANDS=(
-    "kind"
-    "kubectl"
+#    "kind"
+#    "kubectl"
     "python3"
-    "pip"
-    "virtualenv"
+#    "pip"
+#    "virtualenv"
 )
 
 set_shell_debug_level 3
